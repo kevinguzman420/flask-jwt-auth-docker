@@ -1,0 +1,29 @@
+import os
+
+# Configs
+SECRET_KEY="293807b963d994a33e6187de4eea6984191cb5882374c630c84ea30aa56a45c71d4736045f2146656aeb00db6db473f954459e1c5e9cd93242c818f6eb0d1373"
+
+# Db
+SQLALCHEMY_TRACK_MODIFICATION = False
+
+# App environments
+APP_ENV_LOCAL = 'local',
+APP_ENV_TESTING = 'testing'
+APP_ENV_DEVELOPMENT = 'develpment'
+APP_ENV_PRODUCTION = 'production'
+APP_ENV = ''
+
+# Mail
+MAIL_SERVER = os.getenv("MAIL_SERVER")
+MAIL_PORT = os.getenv("MAIL_PORT")
+MAIL_USERNAME = os.getenv("MAIL_USERNAME")
+MAIL_PASSWORD = os.getenv("MAIL_PASSWORD")
+DONT_REPLY_FROM_EMAIL = ('Kevin Guzmán', 'contacto@codemman.com')
+# DONT_REPLY_FROM_EMAIL = os.getenv("DONT_REPLY_FROM_EMAIL")
+MAIL_DEFAULT_SENDER = os.getenv("MAIL_DEFAULT_SENDER")
+MAIL_USE_TLS = True
+ADMINS = (os.getenv("ADMINS"), )
+MAIL_DEBUG = False
+
+# token
+TOKEN_EXPIRED_TIME = 3600
